@@ -1,6 +1,6 @@
 # Homming
 
-Dashboard -> table to showproperties and users
+Dashboard -> table to show properties and users
 
  ## Description
 
