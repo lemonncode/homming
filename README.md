@@ -1,10 +1,22 @@
-# Vue 3 + Vite
+# Homming
 
-To Run 
-'npm install'
+Dashboard -> table to showproperties and users
 
-'npm run dev'
+ ## Description
+
+Technologies: vue, vite
+
+Css framework: Tailwind
+
+Code fragmentation in different components
 
 
 
-# homming
+To improve:
+
+Improve the layout, add form with functionalities. Add backgrounds, images and animations.
+
+
+ ## Installation
+  - to install all packages `npm install`
+  - to run in local `npm run dev`
