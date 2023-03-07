@@ -42,7 +42,7 @@
               {{ prop.name }}
             </th>
             <td class="px-6 py-4">
-              {{ prop.userType }}
+              {{ prop.propType }}
             </td>
             <td class="px-6 py-4">
               <div v-if="prop.rentedFrom">
@@ -117,8 +117,9 @@ export default {
   },
   computed: {
     filteredProps() {
+      let searchTerm = this.typeFilter.toLowerCase();
       return this.properties.filter((prop) => {
-        let searchTerm = this.filter.toLowerCase();
+        prop.propType == searchTerm;
 
         return (this.properties = properties.includes(searchTerm));
       });
@@ -147,7 +148,7 @@ export default {
       for (let prop in properties) {
         let tyId = properties[prop].typeId;
 
-        this.properties[prop].userType = this.propertyTypes.filter(
+        this.properties[prop].propType = this.propertyTypes.filter(
           (property) => property.id == tyId
         )[0].name;
       }
@@ -160,14 +161,6 @@ export default {
         day: "numeric",
       };
       return new Date(date).toLocaleDateString("en", options);
-    },
-
-    isOccupied(date) {
-      if (date == newDate()) {
-        return "occupied";
-      } else {
-        return "no ocupado";
-      }
     },
   },
 };
