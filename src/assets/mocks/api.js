@@ -50,8 +50,8 @@ export const users = [
       userId: 1,
       typeId: 2,
       name: 'Parking - Nuevos Ministerios',
-      rentedFrom: new Date(2020, 3, 9),
-      rentedTo: new Date(2020, 4, 7),
+      rentedFrom: new Date(2023, 2, 8),
+      rentedTo: new Date(2023, 4, 7),
     },
     {
       id: 7,

@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "vue": "^3.2.45",
-    "vue-date-fns": "^2.0.2"
+    "vue-date-fns": "^2.0.2",
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
