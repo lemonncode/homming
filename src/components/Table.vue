@@ -26,7 +26,7 @@
     <p>{{ typeFilterComp }}</p>
 
     <div class="relative overflow-x-auto sm:rounded-lg">
-      <table class="text-gray-500 dark:text-gray-400 text-sm">
+      <table class="text-gray-500 text-gray-400 text-sm">
         <thead class="text-xs text-gray-800 uppercase bg-greenblue">
           <tr>
             <th scope="col" class="px-6 py-3">Name</th>
@@ -41,15 +41,15 @@
           <tr
             v-for="prop in filteredProps"
             :key="prop.id"
-            class="border-b dark:bg-gray-900 dark:border-gray-700"
+            class="border-b bg-gray-900 border-gray-700"
           >
             <th
               scope="row"
-              class="px-6 py-4 font-medium whitespace-nowrap dark:text-white"
+              class="px-6 py-4 font-medium whitespace-nowrap text-white"
             >
-             <button @click="showUser(user)">
+         
               {{ prop.name }}
-             </button> 
+           
             </th>
             <td class="px-6 py-4">
               {{ prop.propType }}
@@ -222,9 +222,7 @@ export default {
       };
       return new Date(date).toDateString("en", options);
     },
-    showUser(user){
-      console.log(user.id)
-    },
+    
     isOccupied() {
       for (let prop in properties) {
         this.properties[prop].occupied = "";
