@@ -3,9 +3,9 @@
     <div
       class="flex justify-center max-w-xs bg-white border border-gray-200 rounded-lg shadow px-5 py-3"
     >
-      <div>
+      <div v-on="getAvatar()">
         <div class="flex flex-col items-center pb-10">
-          <a
+          <img
             class="w-24 h-24 mb-3 rounded-full shadow-lg"
             :src="img"
             alt="user-avatar"
@@ -38,12 +38,12 @@ export default {
   data: () => ({
     img: "",
   }),
-  created() {
-    this.getAvatar();
-  },
+ 
   methods: {
     getAvatar() {
-      this.img = "https://i.pravatar.cc/300";
+    
+        this.img = "https://i.pravatar.cc/300";
+   
     },
   },
 };

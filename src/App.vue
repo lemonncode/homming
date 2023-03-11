@@ -1,7 +1,7 @@
 <template >
   <div class="bg-zinc-100">
 
-    <div class="max-w-7xl m-auto bg-zinc-300">
+    <div class="max-w-7xl m-auto bg-zinc-300 pb-10">
       <!--header-->
       
         <Header />

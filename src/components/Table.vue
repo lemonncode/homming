@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex gap-10 mb-4">
-      <input
+      <!-- <input
         type="text"
         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-greenblue focus:border-greenblue block w-1/3 p-2.5"
         placeholder="name"
@@ -14,7 +14,7 @@
         placeholder="type"
         required
         v-model="typeFilter"
-      />
+      /> -->
       <input
         type="text"
         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-greenblue focus:border-greenblue block w-1/3 p-2.5"
@@ -25,8 +25,8 @@
     </div>
     <p>{{ typeFilterComp }}</p>
 
-    <div class="relative overflow-x-auto sm:rounded-lg">
-      <table class="text-gray-500 text-gray-400 text-sm">
+    <div class="relative overflow-x-auto sm:rounded-lg ">
+      <table class="text-gray-500 text-gray-400 text-sm w-full">
         <thead class="text-xs text-gray-800 uppercase bg-greenblue">
           <tr>
             <th scope="col" class="px-6 py-3">Name</th>
@@ -161,24 +161,24 @@ export default {
     },
 
     filteredProps: function () {
-      if (!this.nameFilter) {
-        return this.properties;
-      }
-      return this.properties.filter((prop) =>
-        prop.name.toLowerCase().includes(this.nameFilter.toLowerCase())
-      );
+      // if (!this.nameFilter) {
+      //   return this.properties;
+      // }
+      // return this.properties.filter((prop) =>
+      //   prop.name.toLowerCase().includes(this.nameFilter.toLowerCase())
+      // );
       // if (!this.typeFilter) {
       //   return this.properties;
       // }
       // return this.properties.filter((prop) =>
       //   prop.propType.toLowerCase().includes(this.typeFilter.toLowerCase())
       // );
-      // if (!this.userFilter) {
-      //   return this.properties;
-      // }
-      // return this.properties.filter((prop) =>
-      //   prop.userName.toLowerCase().includes(this.userFilter.toLowerCase())
-      // );
+      if (!this.userFilter) {
+        return this.properties;
+      }
+      return this.properties.filter((prop) =>
+        prop.userName.toLowerCase().includes(this.userFilter.toLowerCase())
+      );
     },
   },
   created() {
